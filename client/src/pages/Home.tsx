@@ -1,6 +1,6 @@
+import ApplyButton from "@/components/ApplyButton";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
-import { Button } from "@/components/ui/button";
 import { CheckCircle2, TrendingUp, Zap, Lock, CreditCard } from "lucide-react";
 
 /**
@@ -51,12 +51,12 @@ export default function Home() {
 
               {/* CTA Button */}
               <div className="pt-4">
-                <Button
+                <ApplyButton
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-white font-bold text-base md:text-lg px-8 md:px-10 py-6 md:py-7 rounded-lg transition-all hover:scale-105 active:scale-95"
                 >
                   See Your Approval Now
-                </Button>
+                </ApplyButton>
                 <p className="text-xs md:text-sm text-muted-foreground mt-3">
                   Takes less than 3 minutes. No credit impact.
                 </p>
@@ -244,12 +244,12 @@ export default function Home() {
 
               {/* CTA */}
               <div className="pt-6">
-                <Button
+                <ApplyButton
                   size="lg"
                   className="bg-primary hover:bg-primary/90 text-white font-bold px-8 md:px-10 py-6 md:py-7 rounded-lg transition-all hover:scale-105 active:scale-95"
                 >
                   Get Your Credit Now
-                </Button>
+                </ApplyButton>
               </div>
             </div>
           </div>
@@ -390,12 +390,12 @@ export default function Home() {
             Get approved in 3 minutes. No credit impact. Keep your car. Get up to $10k in credit today.
           </p>
           <div className="pt-4">
-            <Button
+            <ApplyButton
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-8 rounded-lg transition-all hover:scale-105 active:scale-95"
             >
               Get Your Credit Now
-            </Button>
+            </ApplyButton>
           </div>
           <p className="text-sm md:text-base text-white/80 pt-4">
             Takes less than 3 minutes. No credit impact.

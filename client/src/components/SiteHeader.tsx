@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import ApplyButton from "@/components/ApplyButton";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
 
@@ -49,12 +49,12 @@ export default function SiteHeader() {
           </Link>
         </nav>
 
-        <Button
+        <ApplyButton
           className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 md:px-8"
           size="lg"
         >
           Get Started
-        </Button>
+        </ApplyButton>
       </div>
     </header>
   );
