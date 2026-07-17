@@ -1,6 +1,7 @@
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2, TrendingUp, Zap, Lock, CreditCard, Clock } from "lucide-react";
-import { useEffect, useState } from "react";
+import { CheckCircle2, TrendingUp, Zap, Lock, CreditCard } from "lucide-react";
 
 /**
  * Credit On Cars Landing Page
@@ -13,45 +14,9 @@ import { useEffect, useState } from "react";
  */
 
 export default function Home() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* Header */}
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "bg-white/90 backdrop-blur-md shadow-sm border-b border-border"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="container flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center gap-2">
-            <img
-              src="/manus-storage/logo-mark_355a1730.png"
-              alt="Credit On Cars"
-              className="w-8 h-8 md:w-10 md:h-10"
-            />
-            <span className="text-lg md:text-xl font-bold text-foreground hidden sm:inline">
-              Credit On Cars
-            </span>
-          </div>
-          <Button
-            className="bg-primary hover:bg-primary/90 text-white font-semibold px-6 md:px-8"
-            size="lg"
-          >
-            Get Started
-          </Button>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* Hero Section */}
       <section className="pt-32 md:pt-40 pb-16 md:pb-24 px-4 md:px-0 relative overflow-hidden">
@@ -438,53 +403,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-foreground text-white py-12 md:py-16">
-        <div className="container">
-          <div className="grid md:grid-cols-4 gap-8 md:gap-12 mb-12">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <img
-                  src="/manus-storage/logo-mark_355a1730.png"
-                  alt="Credit On Cars"
-                  className="w-8 h-8 invert"
-                />
-                <span className="font-bold">Credit On Cars</span>
-              </div>
-              <p className="text-sm text-white/70">
-                Get the cash you need without losing your car's value.
-              </p>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Product</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition">How It Works</a></li>
-                <li><a href="#" className="hover:text-white transition">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition">FAQ</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition">About</a></li>
-                <li><a href="#" className="hover:text-white transition">Blog</a></li>
-                <li><a href="#" className="hover:text-white transition">Contact</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2 text-sm text-white/70">
-                <li><a href="#" className="hover:text-white transition">Privacy</a></li>
-                <li><a href="#" className="hover:text-white transition">Terms</a></li>
-                <li><a href="#" className="hover:text-white transition">Disclosures</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/20 pt-8 text-center text-sm text-white/70">
-            <p>&copy; 2026 Credit On Cars. All rights reserved. Powered by Yendo.</p>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }
