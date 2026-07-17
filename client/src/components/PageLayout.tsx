@@ -1,3 +1,4 @@
+import ApplyButton from "@/components/ApplyButton";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 import { Button } from "@/components/ui/button";
@@ -69,12 +70,12 @@ export default function PageLayout({
               Get approved in 3 minutes. No credit impact. Keep your car.
             </p>
             <div className="pt-2 flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
+              <ApplyButton
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-white font-bold px-8 md:px-10 py-6 rounded-lg transition-all hover:scale-105 active:scale-95"
               >
                 See Your Approval Now
-              </Button>
+              </ApplyButton>
               <Link href="/how-it-works">
                 <Button
                   size="lg"

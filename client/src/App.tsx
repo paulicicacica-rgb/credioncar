@@ -10,13 +10,33 @@ import NotFound from "@/pages/NotFound";
 import Pricing from "@/pages/Pricing";
 import Privacy from "@/pages/Privacy";
 import Terms from "@/pages/Terms";
-import { Route, Switch } from "wouter";
+import { useEffect } from "react";
+import { Route, Switch, useLocation } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 
+declare global {
+  interface Window {
+    gtag?: (...args: unknown[]) => void;
+  }
+}
+
+// Send a Google Analytics page_view whenever the client-side route changes,
+// so every page in this SPA is tracked (not just the initial load).
+function useAnalyticsPageViews() {
+  const [location] = useLocation();
+  useEffect(() => {
+    window.gtag?.("event", "page_view", {
+      page_path: location,
+      page_location: window.location.href,
+      page_title: document.title,
+    });
+  }, [location]);
+}
 
 function Router() {
+  useAnalyticsPageViews();
   return (
     <Switch>
       <Route path={"/"} component={Home} />

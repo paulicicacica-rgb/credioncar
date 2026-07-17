@@ -1,5 +1,5 @@
+import ApplyButton from "@/components/ApplyButton";
 import PageLayout from "@/components/PageLayout";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle2, XCircle } from "lucide-react";
 
@@ -71,12 +71,12 @@ export default function Pricing() {
             ))}
           </ul>
           <div className="mt-8">
-            <Button
+            <ApplyButton
               size="lg"
               className="bg-primary hover:bg-primary/90 text-white font-bold px-8 py-6 rounded-lg transition-all hover:scale-105 active:scale-95"
             >
               See Your Rate
-            </Button>
+            </ApplyButton>
           </div>
         </Card>
       </div>
