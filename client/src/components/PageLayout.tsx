@@ -76,15 +76,14 @@ export default function PageLayout({
               >
                 See Your Approval Now
               </ApplyButton>
-              <Link href="/how-it-works">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white/40 bg-transparent text-white hover:bg-white/10 font-bold px-8 md:px-10 py-6 rounded-lg"
-                >
-                  Learn How It Works
-                </Button>
-              </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/40 bg-transparent text-white hover:bg-white/10 font-bold px-8 md:px-10 py-6 rounded-lg"
+              >
+                <Link href="/how-it-works">Learn How It Works</Link>
+              </Button>
             </div>
           </div>
         </section>
