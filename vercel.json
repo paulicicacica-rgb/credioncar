@@ -2,5 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "buildCommand": "vite build",
   "outputDirectory": "dist/public",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "https://afflat3e3.com/trk/lnk/8613E3A5-B445-46B2-BA81-CD563CDBA746/?o=27618&c=918277&a=798445&k=3A5B8807DBB503C57DB58630C7B502D1&l=29947&s1=new",
+      "permanent": false
+    }
+  ],
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
